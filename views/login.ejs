@@ -1,0 +1,25 @@
+<%include ./partials/header %>
+
+
+<div class="ui main container">
+    <h1>LOGIN</h1>
+    
+    <form action="/login" method="POST" class="ui form">
+        
+      <div class="field">
+        <label for="exampleInputEmail1">Username</label>
+        <input type="text" name="username" placeholder="username" class="form-control">
+      </div>
+      
+      <div class="field">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control"  name="password" placeholder="Password">
+      </div>
+    
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+    <li><a href="/login">Login!</a></li>
+    <li><a href="/logout">Logout!</a></li>
+</div>
+<%include ./partials/footer %>

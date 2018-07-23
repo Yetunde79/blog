@@ -3,6 +3,11 @@ var express               = require('express'),
     expressSanitizer      = require('express-sanitizer'), //remove js script from code
     methodeOverride       = require('method-override'),
     bodyParser            = require('body-parser'),
+    passport              = require('passport'),
+    LocalStrategy         = require('passport-local'),
+    passportLocalMongoose = require('passport-local-mongoose'),
+    User                  = require("./models/user"),
+    Blog                 = require("./models/blog"),
     mongoose              = require('mongoose');
    
  var url =  process.env.DATABASEURL || "mongodb://localhost/restful_blog_app"; 
@@ -16,16 +21,18 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());   //has to go after bodyParser
 app.use(methodeOverride("_method"));  //url we using in edit page is _method
 
-//MONGOOSE/MODEL CONFIG
-var blogSchema = new mongoose.Schema({
-    title: String,
-    image: String,
-    body: String,
-    created: {type: Date, default: Date.now}
-});
+app.use(require("express-session")({
+    secret: "secret",
+    resave: false,
+    saveUninitialized: false
+}));
 
-var Blog = mongoose.model("Blog", blogSchema);
+app.use(passport.initialize());
+app.use(passport.session());
 
+passport.use(new LocalStrategy(User.authenticate())); 
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 //RESTFUL ROUTES
 app.get("/", function(req, res){
@@ -43,8 +50,9 @@ app.get("/blogs", function(req, res){
    });
 });
 
+
 //NEW ROUTE
-app.get("/blogs/new", function(req, res){
+app.get("/blogs/new", isLoggedIn, function(req, res){
     res.render("new");
 });
 
@@ -111,6 +119,55 @@ app.delete("/blogs/:id",function(req, res){
         }
     });
 });
+
+
+//register
+app.get("/register", function(req, res) {
+    res.render("register");
+});
+
+app.post("/register", function(req,res){
+    req.body.username
+    req.body.password
+    User.register(new User({username: req.body.username}), req.body.password, function(err, user){
+        if(err){
+            console.log(err);
+            return res.render("register"); //if error go back to register
+        }
+        passport.authenticate("local")(req, res, function(){ //local strategy, can be changed to another eg twitter
+            res.redirect("/blogs/new"); //once registered you go to secret page
+        })
+    });
+});
+
+
+//Login Route
+app.get("/login", function(req, res) {
+    res.render("login");
+});
+
+//login logic
+//middleware
+app.post("/login",passport.authenticate("local", { //passp.auth goes btwn route & function(req, res). Its a middleware. Runs immediately after getting request
+    successRedirect: "/blogs/new", //if succesfull
+    failureRedirect: "/login"   //if failed
+    }) ,function(req, res) {
+    
+});
+
+//Logout Route
+app.get("/logout", function(req, res) {
+    req.logout();    //logout is a fun from passport
+    res.redirect("/") //redirects to homepage
+});
+
+function isLoggedIn(req, res, next){  //to check if user is logged in. its a middleware, next refers to object called next
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/login");
+}
+//end of reg
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("server started");
