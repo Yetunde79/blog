@@ -11,14 +11,19 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "current-date": "^0.1.1",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-sanitizer": "^1.0.4",
     "express-session": "^1.15.6",
     "method-override": "^3.0.0",
+    "moment": "^2.22.2",
     "mongoose": "^5.2.4",
+    "node-datetime": "^2.0.9",
+    "nodemailer": "^4.6.8",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^5.0.1"
+    "passport-local-mongoose": "^5.0.1",
+    "rating": "^0.1.0"
   }
 }

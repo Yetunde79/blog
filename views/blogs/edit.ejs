@@ -1,4 +1,4 @@
-<%include ./partials/header %>
+<%include ../partials/header %>
 
 <div class="ui main text container segment">                    <% /* */ %>
     <div class="ui huge header">Edit <%= blog.title %></div>
@@ -15,7 +15,7 @@
     
     <div class="field">
         <label>Blog Content</label>
-        <textarea name="blog[body] required"><%-blog.body%></textarea> <% /*text area doesnt have value*/ %>
+        <textarea name="blog[body]" id="content"  required><%=blog.body%></textarea> <% /*text area doesnt have value*/ %>
     </div>
     
     
@@ -23,4 +23,5 @@
 </form>
 </div>
 
-<%include ./partials/footer %>
+ 
+<%include ../partials/footer %>
