@@ -249,7 +249,7 @@ app.delete("/blogs/:id/comment/:comment_id",  function(req, res){
 //comment end
 
 //register
-app.get("/register",isLoggedIn, function(req, res) {
+app.get("/register", function(req, res) {
     res.render("register");
 });
 
