@@ -1,36 +1,37 @@
 <%include ../partials/header %>
 
-<div class="ui main text container segment">
-    <div class="ui huge header">Contact Me</div>
-
-<form class="ui form"  action="/contact" method="POST">
-    <div class="field">
-        <label>Name</label>
-        <input type="text" name="name" placeholder="name">
+<div class="about_container">
+    <div class="ui main text container segment ">
+        <div class="ui huge header">Contact Me</div>
+    
+    <form class="ui form"  action="/contact" method="POST">
+        <div class="field">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="name">
+        </div>
+        
+         <div class="field">
+            <label>Subject</label>
+            <input type="text" name="subject" placeholder="subject">
+        </div>
+        
+         <div class="field">
+            <label>Email *</label>
+            <input type="text" name="email" placeholder="email" required>
+        </div>
+        
+        <div class="field">
+            <label>Message *</label>
+            <textarea name="message"  required></textarea>
+        </div>
+        
+        
+        <input class="ui inverted big purple button" type="submit">
+    </form>
+    
+    
     </div>
-    
-     <div class="field">
-        <label>Subject</label>
-        <input type="text" name="subject" placeholder="subject">
-    </div>
-    
-     <div class="field">
-        <label>Email</label>
-        <input type="text" name="email" placeholder="email">
-    </div>
-    
-    <div class="field">
-        <label>Message</label>
-        <textarea name="message"  required></textarea>
-    </div>
-    
-    
-    <input class="ui inverted big purple button" type="submit">
-</form>
-
-
 </div>
-
 
 
 <%include ../partials/footer %>
