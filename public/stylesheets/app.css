@@ -82,3 +82,7 @@ h1{
 #delete{
     display: inline;
 }
+
+footer{
+    width: 100%;
+}

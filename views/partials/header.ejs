@@ -1,39 +1,41 @@
 <!Doctype html >
 <html>
-    <head>
-        <title>Yettifood</title>
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
-        <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
-        
-        <!--scripts-->
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-         <script src="https://cloud.tinymce.com/4/tinymce.min.js?apiKey=5jaiho001xkumfrpnlnznv1dyptj3c0gs8evah42a6ppl9cp"></script>
-         <script src="/script/tinymce.js"></script> 
-         <script src="/script/rate.js"></script>
-         <script src="/script/interval.js"></script>
-    </head>
-    <body>
-        <div class="ui center">
-            <div class="ui huge header" id="heading"><a id="yetti" href="/">Yettifood</a></div>
-            
-            <div class="containermenu">
-                <% if(!currentUser){ %>
-                    <div class="ui secondary item three pointing menu ">
-                <% } 
-                 else{ %>
-                    <div class="ui secondary item five pointing menu ">
-                <% } %>
-                    <a href="/" class="active item">HOME</a>
-                     <a href="/about" class="item">ABOUT</a>
-                      <a href="/contact" class="item">CONTACT</a>
-                      
-                      <% if(currentUser){ %>
-                            <a href="/new" class="item">NEW</a>
-                            <a href="/logout" class="item">LOGOUT</a>
-                      <% } %>
-                    
-                </div>
-                </div>
-            </div>
+
+<head>
+    <title>Yettifood</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+
+    <!--scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cloud.tinymce.com/4/tinymce.min.js?apiKey=5jaiho001xkumfrpnlnznv1dyptj3c0gs8evah42a6ppl9cp"></script>
+    <script src="/script/tinymce.js"></script>
+</head>
+
+<body>
+    <div class="ui center">
+        <div class="ui huge header" id="heading">
+            <a id="yetti" href="/">Yettifood</a>
         </div>
+
+        <div class="containermenu">
+            <% if(!currentUser){ %>
+                <div class="ui secondary item three pointing menu ">
+                    <% } 
+                 else{ %>
+                        <div class="ui secondary item five pointing menu ">
+                            <% } %>
+                                <a href="/" class="active item">HOME</a>
+                                <a href="/about" class="item">ABOUT</a>
+                                <a href="/contact" class="item">CONTACT</a>
+
+                                <% if(currentUser){ %>
+                                    <a href="/new" class="item">NEW</a>
+                                    <a href="/logout" class="item">LOGOUT</a>
+                                    <% } %>
+
+                        </div>
+                </div>
+        </div>
+    </div>
