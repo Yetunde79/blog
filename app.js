@@ -12,8 +12,8 @@ var express = require("express"),
   Comment = require("./models/comment"),
   nodemailer = require("nodemailer"),
   mongoose = require("mongoose");
-  
-  require('dotenv').config();
+
+require('dotenv').config();
 
 var url = process.env.DATABASEURL || "mongodb://localhost/restful_blog_app";
 
@@ -81,17 +81,17 @@ app.get("/contact", function (req, res) {
 app.post("/contact", function (req, res) {
   let mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
+    host: process.env.NODEMAILER_HOST,
+    port: process.env.NODEMAILER_PORT,
     secure: true,
     auth: {
-      user: "ysolaadebayo@gmail.com",
+      user: process.env.NODEMAILER_EMAIL,
       pass: process.env.GMAIL_APP_PASSwORD
     }
   });
   mailOpts = {
     from: req.body.name + " &lt;" + req.body.email + "&gt;",
-    to: "ysolaadebayo@gmail.com",
+    to: process.env.NODEMAILER_EMAIL,
     subject: "New message from contact form at yettifood",
     text: `${req.body.name} ${req.body.subject} (${req.body.email}) says: ${
       req.body.message
