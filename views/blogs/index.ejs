@@ -1,55 +1,49 @@
 <% include ../partials/header %>
 
-	<div class="container index">
+<div class="container index">
+  <div class="text" id="container_info">
+    <% /* */ %>
+    <div class="ui">
+      <div class="items">
+        <% /*make each item divided*/ %>
 
-		<div class="ui text" id="container_info">
-			<% /* */ %>
-				<div class="ui">
-					<div class="ui items">
-						<% /*make each item divided*/ %>
+        <% blogs.forEach(function(blog){ %>
+        <div class="item">
+          <% /*each for loop is an item*/ %>
 
-							<% blogs.forEach(function(blog){ %>
-								<div class="item">
-									<% /*each for loop is an item*/ %>
+          <div class="medium_image">
+            <a href="/blogs/<%=blog._id %>">
+              <img src="<%= blog.image %>" />
+            </a>
+          </div>
 
-										<div class="ui medium image">
-											<a href="/blogs/<%=blog._id %>">
-												<img src="<%= blog.image %>"> </a>
-										</div>
+          <div class="content">
+            <a href="/blogs/<%=blog._id %>" class="header" id="title">
+              <%= blog.title %>
+            </a>
 
-										<div class="content">
+            <div class="meta">
+              <span class="cinema"> <%= blog.created.toDateString() %> </span>
+            </div>
 
-											<a href="/blogs/<%=blog._id %>" class="header" id="title">
-												<%= blog.title %>
-											</a>
+            <div class="description">
+              <p><%-blog.body.substring(0,200);%>...</p>
+            </div>
 
-											<div class="meta">
-												<span class="cinema">
-													<%= blog.created.toDateString() %>
-												</span>
-											</div>
+            <div class="extra">
+              <a href="/blogs/<%=blog._id %>" class="read">
+                Read More <i class="arrow right icon read"></i>
+              </a>
+            </div>
+          </div>
+        </div>
 
-											<div class="description">
-												<p>
-													<%-blog.body.substring(0,200);%>...</p>
-											</div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
 
-											<div class="extra">
-												<a href="/blogs/<%=blog._id %>" class="read">
-													Read More
-													<i class="arrow right icon read"></i>
-												</a>
-											</div>
-
-										</div>
-								</div>
-
-								<% }); %>
-					</div>
-				</div>
-		</div>
-
-		<div class="about">
+  <!-- <div class="about">
 			<div class="item">
 				<img class="ui medium circular image" src="/img/me.jpg" <p> I am Yetunde. A web developer. I made this website to share my love of cooking. I live in Houston and my favorite type
 				of food is Nigerian food</p>
@@ -60,5 +54,5 @@
 					</a>
 				</div>
 			</div>
-		</div>
-	</div>
+		</div> -->
+</div>
