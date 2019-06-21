@@ -1,31 +1,30 @@
 <%include ../partials/header %>
 
+<div class="ui main text container segment">
+  <div class="ui huge header">New Blog</div>
 
-    <div class="ui main text container segment">
-        <div class="ui huge header">New Blog</div>
-    
-    <form class="ui form" id="newform" action="/blogs" method="POST" novalidate>
-        <div class="field">
-            <label>Title</label>
-            <input type="text" name="blog[title]" placeholder="title">
-        </div>
-         <div class="field">
-            <label>Image</label>
-            <input type="text" name="blog[image]" placeholder="image">
-        </div>
-        
-        <div class="field">
-            <label>Blog Content</label>
-            <textarea name="blog[body]" id="texteditor" placeholder="dont put img in first 100 char" required></textarea>
-        </div>
-        
-        
-        <input class="ui inverted big purple button" type="submit">
-    </form>
-    
-    
+  <form class="ui form" id="newform" action="/blogs" method="POST" novalidate>
+    <div class="field">
+      <label>Title</label>
+      <input type="text" name="blog[title]" placeholder="title" />
+    </div>
+    <div class="field">
+      <label>Image</label>
+      <input type="text" name="blog[image]" placeholder="image" />
     </div>
 
+    <div class="field">
+      <label>Blog Content</label>
+      <textarea
+        name="blog[body]"
+        id="texteditor"
+        placeholder="dont put img in first 100 char"
+        required
+      ></textarea>
+    </div>
 
+    <input class="ui inverted big purple button" type="submit" />
+  </form>
+</div>
 
 <%include ../partials/footer %>
