@@ -2,6 +2,10 @@
 
 You can find the blog here: https://code-blog.herokuapp.com
 
-To run mongod: "C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe"
+To run mongod:
+Windows: "C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe"
+Mac: "mongod"
+
 To run node: node app.js
-Open localhost:8080
+
+Open localhost:5080
