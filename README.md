@@ -8,4 +8,6 @@ Mac: "mongod"
 
 To run node: node app.js
 
+or npm run server
+
 Open localhost:5080

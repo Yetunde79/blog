@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -56,6 +57,14 @@ nav:after {
   list-style: none;
 }
 
+menu li a {
+  color: purple;
+}
+
+menu li a:visited {
+  color: #7300ab;
+}
+
 #social_media {
   float: right;
   padding: 5px;
@@ -80,7 +89,7 @@ a {
 /* INDEX PAGE */
 /* ----------------------------------------------- */
 
-.ui{
+.ui {
   /* width: 60%; */
   padding-left: 10%;
 }
@@ -89,9 +98,8 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 300px);
   grid-template-rows: auto;
-  grid-gap: 10px ;
+  grid-gap: 10px;
 }
-
 
 /* .item {
   background: rgba(255, 255, 255, 0.2);
@@ -112,8 +120,18 @@ i.icon {
   font-size: 1em;
 }
 
-fa-instagram:hover {
-  color: red;
+a i.fa-instagram,
+a i.fa-instagram:visited {
+  color: #c13584;
+}
+
+a i.fa-twitter,
+a i.fa-twitter:visited {
+  color: #00acee;
+}
+a i.fa-facebook-square,
+a i.fa-facebook-square:visited {
+  color: #4267b2;
 }
 
 h1 {
@@ -138,7 +156,6 @@ h1 {
 .read {
   color: #723f5f;
 }
-
 
 .container.main {
   margin-top: 7em;
@@ -171,4 +188,22 @@ h1 {
 
 footer {
   width: 100%;
+  height: 100%;
+  background-color: grey;
+}
+
+.footer-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
