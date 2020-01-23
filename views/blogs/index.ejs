@@ -16,9 +16,11 @@
           </div>
 
           <div class="content">
-            <a href="/blogs/<%=blog._id %>" class="header" id="title">
-              <%= blog.title %>
-            </a>
+            <h2>
+              <a href="/blogs/<%=blog._id %>" class="header" id="title">
+                <%= blog.title %>
+              </a>
+            </h2>
 
             <div class="meta">
               <span class="cinema"> <%= blog.created.toDateString() %> </span>
@@ -40,19 +42,6 @@
       </div>
     </div>
   </div>
-
-  <!-- <div class="about">
-			<div class="item">
-				<img class="ui medium circular image" src="/img/me.jpg" <p> I am Yetunde. A web developer. I made this website to share my love of cooking. I live in Houston and my favorite type
-				of food is Nigerian food</p>
-				<div>
-					<a href="/about" class="ui basic violet read">
-						Read More
-						<i class="arrow right icon read"></i>
-					</a>
-				</div>
-			</div>
-		</div> -->
 </div>
 
 <% include ../partials/footer %>
