@@ -1,47 +1,44 @@
 <% include ../partials/header %>
 
-<div class="container index">
-  <div class="text" id="container_info">
-    <% /* */ %>
-    <div class="ui">
-      <div class="items">
-        <% /*make each item divided*/ %> <% blogs.forEach(function(blog){ %>
-        <div class="item">
-          <% /*each for loop is an item*/ %>
+<div class="index" id="page-container">
+  <div class="content">
+    <div class="items">
+      <% /*make each item divided*/ %> <% blogs.forEach(function(blog){ %>
+      <div class="item">
+        <% /*each for loop is an item*/ %>
 
-          <div class="medium_image">
-            <a href="/blogs/<%=blog._id %>">
-              <img src="<%= blog.image %>" />
-            </a>
-          </div>
-
-          <div class="content">
-            <h2>
-              <a href="/blogs/<%=blog._id %>" class="header" id="title">
-                <%= blog.title %>
-              </a>
-            </h2>
-
-            <div class="meta">
-              <span class="cinema"> <%= blog.created.toDateString() %> </span>
-            </div>
-
-            <div class="description">
-              <p><%-blog.body.substring(0,200);%>...</p>
-            </div>
-
-            <div class="extra">
-              <a href="/blogs/<%=blog._id %>" class="read">
-                Read More <i class="arrow right icon read"></i>
-              </a>
-            </div>
-          </div>
+        <div id="medium_image">
+          <a href="/blogs/<%=blog._id %>">
+            <img src="<%= blog.image %>" />
+          </a>
         </div>
 
-        <% }); %>
+        <div class="index_text">
+          <h3>
+            <a href="/blogs/<%=blog._id %>" id="title">
+              <%= blog.title %>
+            </a>
+          </h3>
+
+          <div id="meta">
+            <span> <%= blog.created.toDateString() %> </span>
+          </div>
+
+          <div id="description">
+            <p><%-blog.body.substring(0,200);%>...</p>
+          </div>
+
+          <div id="extra">
+            <a href="/blogs/<%=blog._id %>" id="read">
+              Read More
+            </a>
+          </div>
+        </div>
       </div>
+
+      <% }); %>
     </div>
   </div>
-</div>
 
-<% include ../partials/footer %>
+  <% include ../partials/footer %>
+</div>

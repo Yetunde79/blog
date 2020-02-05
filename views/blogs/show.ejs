@@ -1,83 +1,89 @@
 <%include ../partials/header %>
 
+<div class="show" id="page-container">
+  <div class="content ">
+    <h2 id="food_title"><%= blog.title%></h2>
 
-    <div class="ui main text container segment">
-        <%/* segment put things in borders*/ %>
-            <div class="ui huge header" id="yetti">
-                <%= blog.title%>
-            </div>
-            <div class="ui top attached ">
-                <div class="item">
-                    <img class="ui centered rounded image" src="<%=blog.image%>">
-                    <div class="content">
-                        <span>
-                            <%= blog.created.toDateString() %>
-                        </span>
-                        <%/*toDateString changes to proper date*/%>
-                    </div>
-                    <div class="description">
-                        <%-blog.body%>
-                            <%/*- instead of = makes it evaluate as code instead of string*/%>
-                    </div>
-                    <% if(currentUser){ %>
-                        <a class="ui orange basic button" href="/blogs/<%=blog._id %>/edit">Edit</a>
-                        <form method="POST" action="/blogs/<%=blog._id %>?_method=DELETE" id="delete">
-                            <button class="ui red basic button">DELETE</button>
-                        </form>
-                        <% } %>
-                </div>
-            </div>
+    <div class="item">
+      <img src="<%=blog.image%>" />
+      <div class="show_content container">
+        <span>
+          <%= blog.created.toDateString() %> <%/*toDateString changes to proper
+          date*/%>
+        </span>
 
+        <div class="segment">
+          <div class="description">
+            <%-blog.body%> <%/*- instead of = makes it evaluate as code instead
+            of string*/%>
+          </div>
+
+          <% if(currentUser){ %>
+          <div class="buttons">
+            <a class="edit button" href="/blogs/<%=blog._id %>/edit">Edit</a>
+            <form
+              method="POST"
+              action="/blogs/<%=blog._id %>?_method=DELETE"
+              class="delete"
+            >
+              <button>Delete</button>
+            </form>
+          </div>
+          <% } %>
+        </div>
+      </div>
     </div>
 
-    <div class="ui text container segment">
-        <p>
-            <a class="ui purple basic button" href="<%=blog._id%>/comments/new">Add New Comment</a>
-        </p>
+    <div class="container ">
+      <div class="segment">
+        <a class="add button" href="<%=blog._id%>/comments/new"
+          >Add New Comment</a
+        >
 
         <%blog.comments.forEach(function(comment){ %>
-            <div class="ui comments">
-                <div class="comment">
-                    <div class="content">
-                        <a class="author">
-                            <%=comment.author%>
-                        </a>
+        <div class="comments">
+          <div class="comment">
+            <a class="author">
+              <%=comment.author%>
+            </a>
 
-                        <div class="metadata">
+            <span class="date">
+              <%=comment.created_at.toDateString()%>
+            </span>
 
-                            <span class="date">
-                                <%=comment.created_at.toDateString()%>
-                            </span>
+            <% if(currentUser){ %>
+            <div class="comment_buttons">
+              <a href="/comment/<%=comment._id %>/edit">
+                <i class="far fa-edit edit"></i>
+              </a>
 
-                            <% if(currentUser){ %>
-
-                                <a href="/comment/<%=comment._id %>/edit">
-                                    <i class="edit outline icon"></i>
-                                </a>
-
-                                <form method="POST" action="/blogs/<%=blog._id%>/comment/<%=comment._id %>?_method=DELETE" id="delete">
-                                    <button>
-                                        <i class="trash alternate outline icon"></i>
-                                    </button>
-                                </form>
-
-                                <% } %>
-
-                        </div>
-
-                        <div class="text">
-                            <%=comment.text%>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="ui horizontal divider">
-                    <i class="comment outline icon"></i>
-                </div>
+              <form
+                method="POST"
+                action="/blogs/<%=blog._id%>/comment/<%=comment._id %>?_method=DELETE"
+                class="delete"
+              >
+                <button>
+                  <i class="far fa-trash-alt"></i>
+                </button>
+              </form>
             </div>
-            <% }) %>
 
+            <% } %>
+
+            <div class="text">
+              <%=comment.text%>
+            </div>
+          </div>
+          <div class="divider">
+            <hr />
+            <i class="far fa-comment"></i>
+            <hr />
+          </div>
+        </div>
+        <% }) %>
+      </div>
     </div>
+  </div>
 
-
-    <%include ../partials/footer %>
+  <%include ../partials/footer %>
+</div>

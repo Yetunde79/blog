@@ -12,6 +12,65 @@ body {
   color: black;
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content {
+  padding: 5%;
+  padding-bottom: 200px;
+}
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center; /*centers items on the line (the x-axis by default)*/
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+}
+
+a.button {
+  padding: 13px 17px;
+  border: 1px solid;
+  text-align: center;
+  border-radius: 12px;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+a.button:hover {
+  color: white;
+}
+
+.add.button {
+  color: #a333c8;
+  border-color: purple;
+}
+
+.add.button:hover {
+  background-color: #a333c8;
+}
+
 /* ----------------------------------------------- */
 /* FONT */
 /* ----------------------------------------------- */
@@ -20,6 +79,13 @@ h1 {
   margin-top: 4em;
 }
 
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 25px;
+}
 /* ----------------------------------------------- */
 /* HEADER */
 /* ----------------------------------------------- */
@@ -118,24 +184,125 @@ a {
   filter: contrast(1.25);
 }
 
-.content h2 {
+.index_text h3 {
   text-transform: uppercase;
+}
+
+#title {
+  color: #723f5f;
+}
+
+#read {
+  color: #723f5f;
+}
+
+/* ----------------------------------------------- */
+/* SHOW PAGE */
+/* ----------------------------------------------- */
+
+.segment {
+  border: 1px solid #d3d3d3;
+  border-radius: 12px;
+  padding: 3% 2%;
+  margin-top: 2%;
+  width: 55%;
+}
+
+.buttons {
+  padding-top: 5%;
+}
+
+.edit {
+  border-color: orange;
+  color: orange;
+}
+
+.edit:hover {
+  background-color: orange;
+  color: white;
+}
+
+.delete {
+  display: inline;
+  padding: 13px 17px;
+  border: 1px solid red;
+  color: red;
+  text-align: center;
+  border-radius: 12px;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.delete:hover {
+  background-color: red;
+  color: white;
+}
+
+.delete button {
+  font-size: 16px;
+}
+
+.comments {
+  padding-top: 5%;
+}
+
+.comment {
+  position: relative;
+}
+
+.comment .edit {
+  padding: 13px 17px;
+  border: 1px solid orange;
+  border-radius: 12px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.comment_buttons {
+  position: absolute;
+  right: 2%;
+  top: 5%;
+}
+
+.author {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.date {
+  color: grey;
+  font-size: 11px;
+  display: inline;
+}
+
+.text {
+  padding-top: 10px;
+}
+
+.divider {
+  padding-top: 5%;
+  color: gray;
+}
+
+.divider i {
+  text-align: center;
+  display: block;
 }
 
 /* ----------------------------------------------- */
 /* ICONS */
 /* ----------------------------------------------- */
-#yetti {
-  /*logo*/
+
+#food_title {
   color: #723f5f;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 3% 0;
 }
 
-#yetti:hover {
+#food_title:hover {
   color: #723f5f;
-}
-
-i.icon {
-  font-size: 1em;
 }
 
 a i.fa-instagram,
@@ -160,38 +327,16 @@ a i.fa-facebook-square:visited {
   padding: 5px;
 }
 
-/* .item:hover {
-  color: purple;
-} */
-
 /* ----------------------------------------------- */
 /* MISC */
 /* ----------------------------------------------- */
-
-#title {
-  color: #723f5f;
-}
-
-.index {
-  min-height: 100%;
-}
-
-#container_info {
-  padding: 5%;
-}
-
-#delete {
-  display: inline;
-}
-
-.read {
-  color: #723f5f;
-}
 
 /* ----------------------------------------------- */
 /* FOOTER */
 /* ----------------------------------------------- */
 footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 150px;
   background-color: grey;
