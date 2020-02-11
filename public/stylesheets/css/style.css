@@ -292,8 +292,27 @@ footer {
   text-align: center;
   display: block; }
 
-.field input[type="text"] {
-  width: 100%;
-  margin: 10px 15px;
-  border: 1px solid gray;
-  border-radius: 12px; }
+.field {
+  padding-top: 27px; }
+  .field input[type="text"],
+  .field input[type="password"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid gray;
+    border-radius: 12px;
+    font-size: 15px; }
+
+input[type="submit"] {
+  margin-top: 50px;
+  padding: 13px 17px;
+  font-size: 15px;
+  border: 1px solid purple;
+  color: purple;
+  text-align: center;
+  border-radius: 12px;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+  input[type="submit"]:hover {
+    background-color: purple;
+    color: white; }

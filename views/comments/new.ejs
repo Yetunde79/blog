@@ -1,11 +1,11 @@
 <%include ../partials/header %>
 
-<div class="about_container">
-  <div class="ui main text container segment">
-    <div class="ui huge header">Add New Comment to <%=blog.title%></div>
+<div class="page-container">
+  <div class="content container">
+    <h3>Add New Comment to <%=blog.title%></h3>
 
     <form
-      class="ui form"
+      class="form"
       id="newform"
       action="/blogs/<%=blog._id%>/comments"
       method="POST"
@@ -23,24 +23,32 @@
 
       <div class="field">
         <label>Email</label>
-        <input type="email" name="comment[email]" placeholder="email" />
+        <input type="text" name="comment[email]" placeholder="email" />
       </div>
 
       <div class="field">
         <label>Comment</label>
-        <textarea name="comment[text]" placeholder="text" required></textarea>
+        <div>
+          <textarea
+            name="comment[text]"
+            placeholder="comment"
+            cols="100"
+            rows="10"
+            required
+          ></textarea>
+        </div>
       </div>
 
-      <div>
+      <div class="field">
         <div
           class="g-recaptcha"
           data-sitekey="6LfSwqkUAAAAAJmPRT8tVZut-zUXrgvin25qvh-M"
         ></div>
       </div>
 
-      <input class="ui inverted big purple button" type="submit" />
+      <input class="submit" type="submit" />
     </form>
   </div>
-</div>
 
-<%include ../partials/footer %>
+  <%include ../partials/footer %>
+</div>

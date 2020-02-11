@@ -1,11 +1,30 @@
-<h1>Sign up</h1>
+<%include ./partials/header %>
 
-<form action="/register" method="POST">
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder ="password">
-    <button>Submit</button>
-</form>
+<div class="page-container">
+  <div class="content container">
+    <h3>Sign up</h3>
 
+    <form action="/register" method="POST" class="form">
+      <div class="field">
+        <input type="text" name="username" placeholder="username" />
+      </div>
+      <div class="field">
+        <input type="password" name="password" placeholder="password" />
+      </div>
 
-<li><a href="/login">Login!</a></li>
-<li><a href="/logout">Logout!</a></li>
+      <input type="submit" class="submit" />
+    </form>
+
+    <div class="log_btns">
+        <li>
+          <a href="/login">Login!</a>
+        </li>
+        <li>
+          <a href="/logout">Logout!</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <%include ./partials/footer %>
+</div>

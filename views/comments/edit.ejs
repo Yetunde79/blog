@@ -1,30 +1,45 @@
-
-
 <%include ../partials/header %>
-<div class="about_container">
-    <div class="ui main text container segment">
-    
-    <form class="ui form" action="/comment/<%=comment._id%>?_method=PUT" method="POST">
-           
-        <div class="field">
-            <label>Author *</label>
-            <input type="text" name="comment[author]" value="<%= comment.author%>">
+<div class="page-container">
+  <div class="content container">
+    <h3>Edit Comment</h3>
+
+    <form
+      class="form"
+      action="/comment/<%=comment._id%>?_method=PUT"
+      method="POST"
+    >
+      <div class="field">
+        <label>Author *</label>
+        <input
+          type="text"
+          name="comment[author]"
+          value="<%= comment.author%>"
+        />
+      </div>
+
+      <div class="field">
+        <label>Email *</label>
+        <input type="text" name="comment[email]" value="<%= comment.email%>" />
+      </div>
+
+      <div class="field">
+        <label>Comment</label>
+        <div>
+          <textarea
+            name="comment[text]"
+            placeholder="text"
+            cols="100"
+            rows="10"
+            required
+          >
+<%= comment.text %></textarea
+          >
         </div>
-        
-        <div class="field">
-            <label>Email *</label>
-            <input type="email" name="comment[email]" value="<%= comment.email%>">
-        </div>
-        
-        <div class="field">
-            <label>Comment</label>
-            <textarea name="comment[text]"  placeholder="text" required><%= comment.text %></textarea>
-        </div>
-        
-        
-        <input class="ui inverted big purple button" type="submit">
+      </div>
+
+      <input class="submit" type="submit" />
     </form>
-    
-    </div>
+  </div>
+
+  <%include ../partials/footer %>
 </div>
-<%include ../partials/footer %>

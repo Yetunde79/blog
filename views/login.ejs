@@ -1,23 +1,32 @@
 <%include ./partials/header %>
 
-<div class="ui main container about_container">
+<div class="page-container">
+  <div class=" container">
     <h1>LOGIN</h1>
-    
-    <form action="/login" method="POST" class="ui form">
-        
+
+    <form action="/login" method="POST" class="form">
       <div class="field">
         <label for="exampleInputEmail1">Username</label>
-        <input type="text" name="username" placeholder="username" class="form-control">
+        <input
+          type="text"
+          name="username"
+          placeholder="username"
+          class="form-control"
+        />
       </div>
-      
+
       <div class="field">
         <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control"  name="password" placeholder="Password">
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          placeholder="Password"
+        />
       </div>
-    
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    
 
+      <input type="submit" class="submit" />
+    </form>
+  </div>
+  <%include ./partials/footer %>
 </div>
-<%include ./partials/footer %>
