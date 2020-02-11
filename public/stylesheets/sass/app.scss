@@ -12,7 +12,7 @@ body {
   color: black;
 }
 
-#page-container {
+.page-container {
   position: relative;
   min-height: 100vh;
 }
@@ -163,134 +163,6 @@ a {
 }
 
 /* ----------------------------------------------- */
-/* INDEX PAGE */
-/* ----------------------------------------------- */
-
-.items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  grid-gap: 100px 50px;
-  text-align: center;
-}
-
-.item img {
-  width: 100%;
-  height: 400px;
-  -o-object-fit: contain;
-  object-fit: contain;
-  mix-blend-mode: luminosity;
-  overflow: hidden;
-  -webkit-filter: contrast(1.25);
-  filter: contrast(1.25);
-}
-
-.index_text h3 {
-  text-transform: uppercase;
-}
-
-#title {
-  color: #723f5f;
-}
-
-#read {
-  color: #723f5f;
-}
-
-/* ----------------------------------------------- */
-/* SHOW PAGE */
-/* ----------------------------------------------- */
-
-.segment {
-  border: 1px solid #d3d3d3;
-  border-radius: 12px;
-  padding: 3% 2%;
-  margin-top: 2%;
-  width: 55%;
-}
-
-.buttons {
-  padding-top: 5%;
-}
-
-.edit {
-  border-color: orange;
-  color: orange;
-}
-
-.edit:hover {
-  background-color: orange;
-  color: white;
-}
-
-.delete {
-  display: inline;
-  padding: 13px 17px;
-  border: 1px solid red;
-  color: red;
-  text-align: center;
-  border-radius: 12px;
-  text-align: center;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.delete:hover {
-  background-color: red;
-  color: white;
-}
-
-.delete button {
-  font-size: 16px;
-}
-
-.comments {
-  padding-top: 5%;
-}
-
-.comment {
-  position: relative;
-}
-
-.comment .edit {
-  padding: 13px 17px;
-  border: 1px solid orange;
-  border-radius: 12px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.comment_buttons {
-  position: absolute;
-  right: 2%;
-  top: 5%;
-}
-
-.author {
-  font-weight: bold;
-  font-size: 17px;
-}
-
-.date {
-  color: grey;
-  font-size: 11px;
-  display: inline;
-}
-
-.text {
-  padding-top: 10px;
-}
-
-.divider {
-  padding-top: 5%;
-  color: gray;
-}
-
-.divider i {
-  text-align: center;
-  display: block;
-}
-
-/* ----------------------------------------------- */
 /* ICONS */
 /* ----------------------------------------------- */
 
@@ -326,10 +198,6 @@ a i.fa-facebook-square:visited {
 .social-list .item {
   padding: 5px;
 }
-
-/* ----------------------------------------------- */
-/* MISC */
-/* ----------------------------------------------- */
 
 /* ----------------------------------------------- */
 /* FOOTER */
