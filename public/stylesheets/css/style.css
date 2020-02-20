@@ -138,6 +138,12 @@ a {
   text-decoration: none; }
 
 /* ----------------------------------------------- */
+/* ABOUT */
+/* ----------------------------------------------- */
+.about p {
+  padding: 15px 0px; }
+
+/* ----------------------------------------------- */
 /* ICONS */
 /* ----------------------------------------------- */
 #food_title {
@@ -292,6 +298,9 @@ footer {
   text-align: center;
   display: block; }
 
+input {
+  outline: none; }
+
 .field {
   padding-top: 27px; }
   .field input[type="text"],
@@ -302,7 +311,12 @@ footer {
     border-radius: 12px;
     font-size: 15px; }
 
-input[type="submit"] {
+.comment_textarea:required {
+  font-size: 15px;
+  margin-bottom: 50px; }
+
+input[type="submit"],
+button #submit {
   margin-top: 50px;
   padding: 13px 17px;
   font-size: 15px;
@@ -313,6 +327,13 @@ input[type="submit"] {
   text-align: center;
   -webkit-transition: all 0.5s;
   transition: all 0.5s; }
-  input[type="submit"]:hover {
+  input[type="submit"]:hover,
+  button #submit:hover {
     background-color: purple;
     color: white; }
+
+.log_btns {
+  padding-top: 150px;
+  display: inline; }
+  .log_btns ul {
+    list-style: none; }
