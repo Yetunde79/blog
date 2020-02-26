@@ -78,35 +78,6 @@ app.get("/contact", function(req, res) {
   res.render("blogs/contact");
 });
 
-// POST route from contact form
-app.post("/contact", function(req, res) {
-  let mailOpts, smtpTrans;
-  smtpTrans = nodemailer.createTransport({
-    host: process.env.NODEMAILER_HOST,
-    port: process.env.NODEMAILER_PORT,
-    secure: true,
-    auth: {
-      user: process.env.NODEMAILER_EMAIL,
-      pass: process.env.GMAIL_APP_PASSwORD
-    }
-  });
-  mailOpts = {
-    from: req.body.name + " &lt;" + req.body.email + "&gt;",
-    to: process.env.NODEMAILER_EMAIL,
-    subject: "New message from contact form at yettifood",
-    text: `${req.body.name} ${req.body.subject} (${req.body.email}) says: ${
-      req.body.message
-    }`
-  };
-  smtpTrans.sendMail(mailOpts, function(error, response) {
-    if (error) {
-      console.log(error);
-    } else {
-      res.render("blogs/success");
-    }
-  });
-});
-
 // CREATE ROUTE
 app.post("/blogs", function(req, res) {
   // create blog
