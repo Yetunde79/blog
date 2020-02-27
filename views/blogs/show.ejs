@@ -53,13 +53,13 @@
 
             <% if(currentUser){ %>
             <div class="comment_buttons">
-              <a href="/comment/<%=comment._id %>/edit">
+              <a href="/blogs/<%=blog._id%>/comments/<%=comment._id%>/edit">
                 <i class="far fa-edit edit"></i>
               </a>
 
               <form
                 method="POST"
-                action="/blogs/<%=blog._id%>/comment/<%=comment._id %>?_method=DELETE"
+                action="/blogs/<%=blog._id%>/comments/<%=comment._id %>?_method=DELETE"
                 class="delete"
               >
                 <button>

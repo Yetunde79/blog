@@ -5,7 +5,7 @@
 
     <form
       class="form"
-      action="/comment/<%=comment._id%>?_method=PUT"
+      action="/blogs/<%=blog_id%>/comments/<%=comment._id%>?_method=PUT"
       method="POST"
     >
       <div class="field">
@@ -14,12 +14,18 @@
           type="text"
           name="comment[author]"
           value="<%= comment.author%>"
+          required
         />
       </div>
 
       <div class="field">
         <label>Email *</label>
-        <input type="text" name="comment[email]" value="<%= comment.email%>" />
+        <input
+          type="text"
+          name="comment[email]"
+          value="<%= comment.email%>"
+          required
+        />
       </div>
 
       <div class="field">
