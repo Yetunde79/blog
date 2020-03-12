@@ -17,6 +17,10 @@
   -webkit-filter: contrast(1.25);
   filter: contrast(1.25); }
 
+.index_text div,
+.index_text h3 {
+  padding-bottom: 10px; }
+
 .index_text h3 {
   text-transform: uppercase; }
 

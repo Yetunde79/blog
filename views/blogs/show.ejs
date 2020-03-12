@@ -20,7 +20,7 @@
 
           <% if(currentUser){ %>
           <div class="buttons">
-            <a class="edit button" href="/blogs/<%=blog._id %>/edit">Edit</a>
+            <a class="edit" href="/blogs/<%=blog._id %>/edit">Edit</a>
             <form
               method="POST"
               action="/blogs/<%=blog._id %>?_method=DELETE"
@@ -36,9 +36,7 @@
 
     <div class="container ">
       <div class="segment">
-        <a class="add button" href="<%=blog._id%>/comments/new"
-          >Add New Comment</a
-        >
+        <a class="add" href="<%=blog._id%>/comments/new">Add New Comment</a>
 
         <%blog.comments.forEach(function(comment){ %>
         <div class="comments">

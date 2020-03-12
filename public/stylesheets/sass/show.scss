@@ -1,6 +1,19 @@
-/* ----------------------------------------------- */
-/* SHOW PAGE */
-/* ----------------------------------------------- */
+@mixin buttons($color) {
+  padding: 13px 17px;
+  border: 1px solid;
+  text-align: center;
+  border-radius: 12px;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: $color;
+  border-color: $color;
+  &:hover {
+    background-color: $color;
+    color: white;
+  }
+}
+
 .segment {
   border: 1px solid #d3d3d3;
   border-radius: 12px;
@@ -13,51 +26,34 @@
   padding-top: 5%;
 }
 
-.edit {
-  border-color: orange;
-  color: orange;
+.add {
+  @include buttons(#a333c8);
 }
 
-.edit:hover {
-  background-color: orange;
-  color: white;
+.edit {
+  @include buttons(orange);
 }
 
 .delete {
+  @include buttons(red);
   display: inline;
-  padding: 13px 17px;
-  border: 1px solid red;
-  color: red;
-  text-align: center;
-  border-radius: 12px;
-  text-align: center;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  button {
+    font-size: 16px;
+  }
 }
-
-.delete:hover {
-  background-color: red;
-  color: white;
-}
-
-.delete button {
-  font-size: 16px;
-}
-
 .comments {
   padding-top: 5%;
 }
 
 .comment {
   position: relative;
-}
-
-.comment .edit {
-  padding: 13px 17px;
-  border: 1px solid orange;
-  border-radius: 12px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  .edit {
+    padding: 13px 17px;
+    border: 1px solid orange;
+    border-radius: 12px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
 }
 
 .comment_buttons {
@@ -84,9 +80,8 @@
 .divider {
   padding-top: 5%;
   color: gray;
-}
-
-.divider i {
-  text-align: center;
-  display: block;
+  i {
+    text-align: center;
+    display: block;
+  }
 }

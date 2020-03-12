@@ -4,9 +4,14 @@ input {
 .field {
   padding-top: 27px; }
   .field input[type="text"],
+  .field input[type="email"],
   .field input[type="password"] {
     width: 100%;
     padding: 10px 15px;
+    border: 1px solid gray;
+    border-radius: 12px;
+    font-size: 15px; }
+  .field textarea {
     border: 1px solid gray;
     border-radius: 12px;
     font-size: 15px; }

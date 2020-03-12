@@ -1,6 +1,3 @@
-/* ----------------------------------------------- */
-/* SHOW PAGE */
-/* ----------------------------------------------- */
 .segment {
   border: 1px solid #d3d3d3;
   border-radius: 12px;
@@ -11,44 +8,62 @@
 .buttons {
   padding-top: 5%; }
 
-.edit {
-  border-color: orange;
-  color: orange; }
-
-.edit:hover {
-  background-color: orange;
-  color: white; }
-
-.delete {
-  display: inline;
+.add {
   padding: 13px 17px;
-  border: 1px solid red;
-  color: red;
+  border: 1px solid;
   text-align: center;
   border-radius: 12px;
   text-align: center;
   -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  color: #a333c8;
+  border-color: #a333c8; }
+  .add:hover {
+    background-color: #a333c8;
+    color: white; }
 
-.delete:hover {
-  background-color: red;
-  color: white; }
+.edit {
+  padding: 13px 17px;
+  border: 1px solid;
+  text-align: center;
+  border-radius: 12px;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: orange;
+  border-color: orange; }
+  .edit:hover {
+    background-color: orange;
+    color: white; }
 
-.delete button {
-  font-size: 16px; }
+.delete {
+  padding: 13px 17px;
+  border: 1px solid;
+  text-align: center;
+  border-radius: 12px;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: red;
+  border-color: red;
+  display: inline; }
+  .delete:hover {
+    background-color: red;
+    color: white; }
+  .delete button {
+    font-size: 16px; }
 
 .comments {
   padding-top: 5%; }
 
 .comment {
   position: relative; }
-
-.comment .edit {
-  padding: 13px 17px;
-  border: 1px solid orange;
-  border-radius: 12px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
+  .comment .edit {
+    padding: 13px 17px;
+    border: 1px solid orange;
+    border-radius: 12px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s; }
 
 .comment_buttons {
   position: absolute;
@@ -70,7 +85,6 @@
 .divider {
   padding-top: 5%;
   color: gray; }
-
-.divider i {
-  text-align: center;
-  display: block; }
+  .divider i {
+    text-align: center;
+    display: block; }

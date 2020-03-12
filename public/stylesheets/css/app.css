@@ -33,6 +33,9 @@ body {
   -webkit-box-direction: normal;
   flex-direction: column; }
 
+a {
+  text-decoration: none; }
+
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -42,25 +45,6 @@ input[type="reset"] {
   padding: 0;
   cursor: pointer;
   outline: inherit; }
-
-a.button {
-  padding: 13px 17px;
-  border: 1px solid;
-  text-align: center;
-  border-radius: 12px;
-  text-align: center;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
-
-a.button:hover {
-  color: white; }
-
-.add.button {
-  color: #a333c8;
-  border-color: purple; }
-
-.add.button:hover {
-  background-color: #a333c8; }
 
 /* ----------------------------------------------- */
 /* FONT */
@@ -84,18 +68,16 @@ h3 {
   color: #723f5f; }
 
 #menu {
-  float: left;
-  /* padding: 5px; */ }
+  float: left; }
 
 nav {
   width: 100%;
   height: auto;
   border-bottom: 2px solid purple; }
-
-nav:after {
-  content: "";
-  display: block;
-  clear: both; }
+  nav:after {
+    content: "";
+    display: block;
+    clear: both; }
 
 .containermenu {
   margin-left: auto;
@@ -104,38 +86,31 @@ nav:after {
   height: auto;
   padding-right: 60px;
   padding-left: 60px; }
-
-.containermenu::after {
-  display: block;
-  height: 2px;
-  background-color: purple;
-  content: " ";
-  width: 1350px;
-  max-width: 100%;
-  margin-top: 10px; }
+  .containermenu::after {
+    display: block;
+    height: 2px;
+    background-color: purple;
+    content: " ";
+    width: 1350px;
+    max-width: 100%;
+    margin-top: 10px; }
 
 #menu li {
   display: inline-block;
   padding-right: 25px;
   list-style: none; }
-
-#menu li a {
-  color: #0e1111; }
-
-#menu li a:visited {
-  color: #7300ab; }
+  #menu li a {
+    color: #0e1111; }
+    #menu li a:visited {
+      color: #7300ab; }
 
 #social_media {
   float: right;
   padding: 5px; }
-
-#social_media li {
-  display: inline-block;
-  padding-right: 25px;
-  list-style: none; }
-
-a {
-  text-decoration: none; }
+  #social_media li {
+    display: inline-block;
+    padding-right: 25px;
+    list-style: none; }
 
 /* ----------------------------------------------- */
 /* ABOUT */
@@ -151,9 +126,8 @@ a {
   text-align: center;
   text-transform: uppercase;
   margin: 3% 0; }
-
-#food_title:hover {
-  color: #723f5f; }
+  #food_title:hover {
+    color: #723f5f; }
 
 a i.fa-instagram,
 a i.fa-instagram:visited {
@@ -169,9 +143,8 @@ a i.fa-facebook-square:visited {
 
 .social-list {
   padding-top: 5px; }
-
-.social-list .item {
-  padding: 5px; }
+  .social-list .item {
+    padding: 5px; }
 
 /* ----------------------------------------------- */
 /* FOOTER */
