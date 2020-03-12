@@ -13,9 +13,7 @@
   -o-object-fit: contain;
   object-fit: contain;
   mix-blend-mode: luminosity;
-  overflow: hidden;
-  -webkit-filter: contrast(1.25);
-  filter: contrast(1.25); }
+  overflow: hidden; }
 
 .index_text div,
 .index_text h3 {
