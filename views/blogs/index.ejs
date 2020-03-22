@@ -7,7 +7,7 @@
       <div class="item">
         <% /*each for loop is an item*/ %>
 
-        <div id="medium_image">
+        <div class="medium_image">
           <a href="/blogs/<%=blog._id %>">
             <img src="<%= blog.image %>" />
           </a>
@@ -20,25 +20,32 @@
             </a>
           </h3>
 
-          <div id="meta">
+          <div class="meta">
             <span> <%= blog.created.toDateString() %> </span>
           </div>
 
-          <div id="description">
+          <div class="description">
             <p><%-blog.body.substring(0,200);%>...</p>
           </div>
 
-          <div id="extra">
-            <a href="/blogs/<%=blog._id %>" id="read">
+          <div class="extra">
+            <a href="/blogs/<%=blog._id %>" class="read">
               Read More
             </a>
           </div>
         </div>
-      </div> <!--item-->
+      </div>
+      <!--item-->
 
       <% }); %>
-    </div><!--items-->
-  </div><!--content-->
+    </div>
+    <!--items-->
+  </div>
+  <!--content-->
 
   <% include ../partials/footer %>
-</div> <!--page-container-->
+</div>
+<!--page-container-->
+
+</div>
+</div>
