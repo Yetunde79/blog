@@ -12,28 +12,26 @@
           <img src="<%= blog.image %>" />
         </a>
 
-        <div>
-          <h3>
-            <a href="/blogs/<%=blog._id %>" id="title">
-              <%= blog.title %>
-            </a>
-          </h3>
+        <h3>
+          <a href="/blogs/<%=blog._id %>" id="title">
+            <%= blog.title %>
+          </a>
+        </h3>
 
-          <div class="meta">
-            <span> <%= blog.created.toDateString() %> </span>
-          </div>
-
-          <div class="description">
-            <p><%-blog.body.substring(0,200);%>...</p>
-          </div>
-
-          <div class="extra">
-            <a href="/blogs/<%=blog._id %>" class="read">
-              Read More
-            </a>
-          </div>
-
+        <div class="meta">
+          <span> <%= blog.created.toDateString() %> </span>
         </div>
+
+        <div class="description">
+          <p><%-blog.body.substring(0,200);%>...</p>
+        </div>
+
+        <div class="extra">
+          <a href="/blogs/<%=blog._id %>" class="read">
+            Read More
+          </a>
+        </div>
+
 
       </div>
       <!--item-->
