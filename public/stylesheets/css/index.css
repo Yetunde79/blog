@@ -14,12 +14,12 @@
   object-fit: contain;
   overflow: hidden; }
 
-.index_text div,
-.index_text h3 {
+.item div {
   padding-bottom: 10px; }
 
-.index_text h3 {
-  text-transform: uppercase; }
+.item h3 {
+  text-transform: uppercase;
+  padding-bottom: 10px; }
 
 #title {
   color: #723f5f; }
