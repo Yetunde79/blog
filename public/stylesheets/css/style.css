@@ -15,7 +15,7 @@ body {
   min-height: 100vh; }
 
 .content {
-  padding: 2%;
+  padding: 0 2%;
   padding-bottom: 200px; }
 
 .container {
@@ -181,6 +181,10 @@ footer {
   -o-object-fit: contain;
   object-fit: contain;
   overflow: hidden; }
+
+.item .index_text {
+  margin: 10px 50px;
+  text-align: center; }
 
 .item div {
   padding-bottom: 10px; }

@@ -14,6 +14,10 @@
   object-fit: contain;
   overflow: hidden; }
 
+.item .index_text {
+  margin: 10px 50px;
+  text-align: center; }
+
 .item div {
   padding-bottom: 10px; }
 
