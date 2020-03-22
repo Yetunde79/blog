@@ -12,22 +12,22 @@
           <img src="<%= blog.image %>" />
         </a>
 
-        <div class="index_text">
-          <h3>
-            <a href="/blogs/<%=blog._id %>" id="title">
-              <%= blog.title %>
-            </a>
-          </h3>
-
-          <span> <%= blog.created.toDateString() %> </span>
-
-          <p><%-blog.body.substring(0,200);%>...</p>
-
-          <a href="/blogs/<%=blog._id %>" class="read">
-            Read More
+        <!-- <div class="index_text"> -->
+        <h3>
+          <a href="/blogs/<%=blog._id %>" id="title">
+            <%= blog.title %>
           </a>
+        </h3>
 
-        </div>
+        <span> <%= blog.created.toDateString() %> </span>
+
+        <p><%-blog.body.substring(0,200);%>...</p>
+
+        <a href="/blogs/<%=blog._id %>" class="read">
+          Read More
+        </a>
+
+        <!-- </div> -->
         <!--index-text-->
 
       </div>
