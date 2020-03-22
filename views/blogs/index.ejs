@@ -18,20 +18,13 @@
           </a>
         </h3>
 
-        <div class="meta">
-          <span> <%= blog.created.toDateString() %> </span>
-        </div>
+        <span> <%= blog.created.toDateString() %> </span>
 
-        <div class="description">
-          <p><%-blog.body.substring(0,200);%>...</p>
-        </div>
+        <p><%-blog.body.substring(0,200);%>...</p>
 
-        <div class="extra">
-          <a href="/blogs/<%=blog._id %>" class="read">
-            Read More
-          </a>
-        </div>
-
+        <a href="/blogs/<%=blog._id %>" class="read">
+          Read More
+        </a>
 
       </div>
       <!--item-->
