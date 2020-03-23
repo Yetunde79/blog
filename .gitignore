@@ -1,3 +1,4 @@
 node_modules
 .env
 .DS_Store
+.blog_captcha-key.rtf

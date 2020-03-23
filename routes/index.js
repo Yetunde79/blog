@@ -12,7 +12,7 @@ router.get("/", function(req, res) {
     } else {
       res.render("blogs/index", { blogs: blogs });
     }
-  });
+  }).sort({ created: "descending" });
 });
 
 //NEW ROUTE
