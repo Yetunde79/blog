@@ -1,7 +1,7 @@
 .segment {
   border: 1px solid #d3d3d3;
   border-radius: 12px;
-  padding: 3% 2%;
+  padding: 3% 5%;
   margin-top: 2%;
   width: 55%; }
 
@@ -14,7 +14,6 @@
   text-align: center;
   border-radius: 12px;
   text-align: center;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   color: #a333c8;
   border-color: #a333c8; }
@@ -28,7 +27,6 @@
   text-align: center;
   border-radius: 12px;
   text-align: center;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   color: orange;
   border-color: orange; }
@@ -42,7 +40,6 @@
   text-align: center;
   border-radius: 12px;
   text-align: center;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   color: red;
   border-color: red;
@@ -62,7 +59,6 @@
     padding: 13px 17px;
     border: 1px solid orange;
     border-radius: 12px;
-    -webkit-transition: all 0.5s;
     transition: all 0.5s; }
 
 .comment_buttons {
